@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Well and Worthy Coaching | Because You Are Worthy of Feeling Well</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #203a43;
+            --sand: #f8ecd4;
+            --peach: #ffd5c2;
+            --sky: #cce6f6;
+            --white: #fefefe;
+            --soft-blue: #f3f8fc;
+        }
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        body {
+            font-family: 'Lato', Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--navy);
+            background: linear-gradient(120deg, var(--soft-blue), var(--peach) 100%);
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: linear-gradient(90deg, var(--navy) 0%, var(--sand) 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 14px rgba(32,58,67,0.09);
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {color: var(--sand);}
+        .hero {
+            background: linear-gradient(120deg, var(--soft-blue) 0%, var(--peach) 100%);
+            text-align: center;
+            padding: 150px 0 80px 0;
+            margin-top: 60px;
+        }
+        .hero img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px rgba(32,58,67,0.2);
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--navy);
+            font-weight: 700;
+        }
+        .subheadline {
+            font-size: 1.3rem;
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            color: #385e72;
+            max-width: 800px;
+            margin: 0 auto 2rem auto;
+        }
+        .cta-button {
+            display: inline-block;
+            background: var(--navy);
+            color: var(--sand);
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.13rem;
+            box-shadow: 0 2px 14px var(--navy);
+            letter-spacing: 1px;
+            border: none;
+            transition: background 0.3s, color 0.3s, box-shadow 0.18s, transform 0.17s;
+            margin-top: 15px;
+        }
+        .cta-button:hover {
+            background: var(--sand);
+            color: var(--navy);
+            box-shadow: 0 8px 28px var(--navy);
+            transform: scale(1.05) translateY(-2px);
+        }
+        .consult {
+            background: linear-gradient(120deg, var(--peach) 55%, var(--sky) 100%);
+            color: var(--navy);
+            padding: 60px 0 45px 0;
+            text-align: center;
+        }
+        .consult h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1.1rem;
+        }
+        .consult p {
+            font-size: 1.08rem;
+            margin-bottom: 1.7rem;
+            color: #385e72;
+            max-width: 540px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .section {
+            padding: 70px 0;
+            background: var(--white);
+        }
+        .section h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: var(--navy);
+            font-family: 'Playfair Display', serif;
+        }
+        .section p {
+            font-size: 1.08rem;
+            color: #385e72;
+            max-width: 700px;
+            margin: 0 auto 1.5rem auto;
+            text-align: center;
+        }
+        .meets-you {
+            background: linear-gradient(120deg, var(--sand) 0%, var(--sky) 100%);
+        }
+        .services-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            max-width: 700px;
+            margin: 2rem auto 0 auto;
+        }
+        .service-card {
+            background: var(--soft-blue);
+            padding: 2.2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px rgba(32,58,67,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .service-card:hover {transform: translateY(-5px);}
+        .service-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--navy);
+            font-family: 'Playfair Display', serif;
+        }
+        .service-card p {color: #385e72;}
+        .bottom-cta {
+            background: linear-gradient(120deg, var(--peach) 0%, var(--sky) 100%);
+            text-align: center;
+            padding: 60px 0 40px 0;
+        }
+        .bottom-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--navy);
+            margin-bottom: 1.1rem;
+        }
+        .bottom-cta p {
+            color: #385e72;
+            font-size: 1.08rem;
+            margin-bottom: 1.7rem;
+            font-family: 'Lato', Arial, sans-serif;
+        }
+        footer {
+            background: var(--navy);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            font-size: 1rem;
+        }
+        @media (max-width: 900px) {
+            .services-list {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+        @media (max-width: 768px) {
+            .nav-links {display: none;}
+            .hero h1 {font-size: 1.8rem;}
+            .section h2, .consult h2, .bottom-cta h2 {font-size: 1.4rem;}
+            .service-card h3 {font-size: 1rem;}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Well and Worthy Coaching</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#consult">Free Consultation</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Because you are worthy of feeling well!</h1>
+            <div class="subheadline">
+                Feel confident. Feel grounded. Feel worthy—just as you are.
+            </div>
+            <p>
+                Personalized 1:1 coaching to help you build emotional wellness, lasting self-worth, and vibrant health.<br>
+                Coaching for those who crave sunshine in the soul.<br>
+                <span style="font-size:1rem;color:#385e72;">
+                    Certified Health & Life Coach, Breathwork Practitioner, and Happy for No Reason Trainer.<br>
+                    I'm here to walk beside you as you embrace your perfectly imperfect, ever-evolving self.
+                </span>
+            </p>
+            <a href="#consult" class="cta-button">Book Your Free 30-Min Consultation</a>
+        </div>
+    </section>
+
+    <section id="consult" class="consult">
+        <div class="container">
+            <h2>Free 30-Minute Consultation</h2>
+            <p>
+                Ready to feel at home in your own skin? Let's meet for a free 30-minute consultation—virtually or in person. Experience what compassionate, personalized coaching can do for you.
+            </p>
+            <a href="mailto:savannah@wellandworthycoaching.com" class="cta-button">Reserve Your Spot</a>
+        </div>
+    </section>
+
+    <section id="about" class="section meets-you">
+        <div class="container">
+            <h2>Coaching That Meets You</h2>
+            <p>
+                You're not a project to be fixed. You're a person to be supported, seen, and heard—and that's exactly what I offer.<br><br>
+                I'm not just a coach with credentials (though yes, I have those too: a background in psychology, certifications in nutrition, mindfulness, breathwork, and health coaching). I'm an intuitive guide, an empath, and a deep listener who knows how to tune into what you really need—sometimes before you even know how to say it.<br><br>
+                This work isn't one-size-fits-all. With me, it's personal.<br><br>
+                We start by focusing on the most important relationship in your life: the one you have with yourself. You will build confidence, emotional strength, and a sense of worth that isn't waiting on anything outside of you.<br><br>
+                I'm here to help you feel good now, not "when."
+            </p>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container">
+            <h2>My Approach</h2>
+            <div class="services-list">
+                <div class="service-card">
+                    <h3>Personalized Coaching</h3>
+                    <p>1:1 sessions tailored to your unique needs, focusing on emotional wellness and self-worth.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Breathwork & Mindfulness</h3>
+                    <p>Evidence-based techniques to help you feel grounded and present in your body.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Health & Wellness</h3>
+                    <p>Holistic approach to vibrant health that honors your whole self.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Emotional Support</h3>
+                    <p>Compassionate guidance to help you navigate life's challenges with confidence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bottom-cta">
+        <div class="container">
+            <h2>Because you are worthy of feeling well!</h2>
+            <p>
+                Feel confident. Feel grounded. Feel worthy—just as you are.<br>
+                Personalized 1:1 coaching to help you build emotional wellness, lasting self-worth, and vibrant health.
+            </p>
+            <a href="#consult" class="cta-button">Start your journey today</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Well and Worthy Coaching with Savannah Boch. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
