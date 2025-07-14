@@ -50,48 +50,50 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 1.4rem;
         }
         .nav-links a {
             color: white;
             text-decoration: none;
             font-size: 1rem;
-            font-weight: 500;
-            transition: color 0.3s;
+            transition: opacity 0.3s;
         }
-        .nav-links a:hover {color: var(--sand);}
+        .nav-links a:hover {opacity: 0.8;}
         .hero {
-            background: linear-gradient(120deg, var(--soft-blue) 0%, var(--peach) 100%);
+            background: linear-gradient(120deg, var(--sky) 0%, var(--peach) 100%);
+            color: var(--navy);
+            padding: 135px 0 80px 0;
             text-align: center;
-            padding: 150px 0 80px 0;
-            margin-top: 60px;
         }
         .hero img {
-            width: 200px;
-            height: 200px;
+            width: 160px;
             border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 2rem;
-            box-shadow: 0 8px 32px rgba(32,58,67,0.2);
+            border: 7px solid var(--sand);
+            box-shadow: 0 4px 18px var(--navy);
+            display: block;
+            margin: 0 auto 24px auto;
+            background: var(--white);
         }
         .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 1rem;
-            color: var(--navy);
-            font-weight: 700;
+            font-weight: 600;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
         }
-        .subheadline {
-            font-size: 1.3rem;
-            color: var(--navy);
-            margin-bottom: 1.5rem;
-            font-weight: 500;
+        .hero .subheadline {
+            font-size: 1.15rem;
+            color: #385e72;
+            margin-bottom: 1.6rem;
+            font-family: 'Playfair Display', serif;
         }
         .hero p {
-            font-size: 1.1rem;
-            color: #385e72;
-            max-width: 800px;
-            margin: 0 auto 2rem auto;
+            font-size: 1.12rem;
+            margin-bottom: 2.2rem;
+            color: var(--navy);
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .cta-button {
             display: inline-block;
@@ -122,7 +124,7 @@
         }
         .consult h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             margin-bottom: 1.1rem;
         }
         .consult p {
@@ -133,13 +135,69 @@
             margin-left: auto;
             margin-right: auto;
         }
+        .booking-form {
+            max-width: 500px;
+            margin: 2rem auto;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px rgba(32,58,67,0.1);
+            text-align: left;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--navy);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--sand);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Lato', Arial, sans-serif;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--navy);
+        }
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        .calendar-section {
+            background: var(--soft-blue);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        .calendar-section h4 {
+            color: var(--navy);
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+        .calendar-embed {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 8px;
+        }
         .section {
             padding: 70px 0;
             background: var(--white);
         }
         .section h2 {
             text-align: center;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             margin-bottom: 2rem;
             color: var(--navy);
             font-family: 'Playfair Display', serif;
@@ -161,22 +219,81 @@
             max-width: 700px;
             margin: 2rem auto 0 auto;
         }
+        .session-img {
+            width: 100%;
+            max-width: 300px;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 13px;
+            margin: 0 auto 16px auto;
+            background: var(--peach);
+            box-shadow: 0 5px 18px var(--navy);
+            display: block;
+        }
         .service-card {
             background: var(--soft-blue);
             padding: 2.2rem;
             border-radius: 15px;
-            box-shadow: 0 5px 18px rgba(32,58,67,0.1);
+            box-shadow: 0 5px 18px var(--navy);
             text-align: center;
             transition: transform 0.3s;
         }
         .service-card:hover {transform: translateY(-5px);}
         .service-card h3 {
-            font-size: 1.2rem;
+            font-size: 1.12rem;
             margin-bottom: 1rem;
             color: var(--navy);
             font-family: 'Playfair Display', serif;
         }
         .service-card p {color: #385e72;}
+        .service-card-visual {
+            margin: 1rem 0;
+            font-size: 2.5rem;
+            line-height: 1;
+        }
+        .coach-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid var(--sand);
+            margin: 0 auto 1rem auto;
+            display: block;
+            object-fit: cover;
+            background: var(--peach);
+        }
+        .journey {
+            background: linear-gradient(120deg, var(--sky) 0%, var(--sand) 100%);
+            padding: 80px 0;
+        }
+        .journey .container {
+            max-width: 750px;
+        }
+        .journey h2 {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--navy);
+            font-family: 'Playfair Display', serif;
+        }
+        .journey-card {
+            background: var(--white);
+            padding: 2.2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px var(--navy);
+            margin-bottom: 2rem;
+        }
+        .journey-card h3 {
+            color: var(--navy);
+            margin-bottom: 1rem;
+            font-size: 1.07rem;
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+        }
+        .journey-card p {
+            color: #385e72;
+            font-size: 1.07rem;
+            line-height: 1.7;
+        }
         .bottom-cta {
             background: linear-gradient(120deg, var(--peach) 0%, var(--sky) 100%);
             text-align: center;
@@ -184,7 +301,7 @@
         }
         .bottom-cta h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             color: var(--navy);
             margin-bottom: 1.1rem;
         }
@@ -209,9 +326,9 @@
         }
         @media (max-width: 768px) {
             .nav-links {display: none;}
-            .hero h1 {font-size: 1.8rem;}
-            .section h2, .consult h2, .bottom-cta h2 {font-size: 1.4rem;}
-            .service-card h3 {font-size: 1rem;}
+            .hero h1 {font-size: 1.4rem;}
+            .section h2, .journey h2, .consult h2, .bottom-cta h2 {font-size: 1.1rem;}
+            .service-card h3, .journey-card h3 {font-size: 0.9rem;}
         }
     </style>
 </head>
@@ -222,8 +339,10 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#consult">Free Consultation</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
+                <li><a href="#meets-you">Coaching That Meets You</a></li>
+                <li><a href="#why">Why Work With Me</a></li>
+                <li><a href="#services">Sessions</a></li>
+                <li><a href="#journey">My Journey</a></li>
             </ul>
         </nav>
     </header>
@@ -252,43 +371,117 @@
             <p>
                 Ready to feel at home in your own skin? Let's meet for a free 30-minute consultation—virtually or in person. Experience what compassionate, personalized coaching can do for you.
             </p>
-            <a href="mailto:savannah@wellandworthycoaching.com" class="cta-button">Reserve Your Spot</a>
+            
+            <form class="booking-form" action="mailto:savannahleeh.l.coaching@gmail.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="goals">What are your goals for this session? *</label>
+                    <textarea id="goals" name="goals" placeholder="Share what you'd like to explore or achieve in our consultation..." required></textarea>
+                </div>
+                
+                <div class="calendar-section">
+                    <h4>Choose Your Preferred Time</h4>
+                    <p style="font-size: 0.9rem; color: #385e72; margin-bottom: 1rem;">
+                        Select a time that works for you from the calendar below. After submitting this form, you'll receive a confirmation email with meeting details.
+                    </p>
+                    <div style="background: var(--white); padding: 1rem; border-radius: 8px; border: 2px dashed var(--sand);">
+                        <p style="color: var(--navy); font-weight: 600;">📅 Calendar Integration</p>
+                        <p style="font-size: 0.9rem; color: #385e72;">
+                            After submitting your information, you'll be redirected to schedule your appointment directly with Savannah's calendar.
+                        </p>
+                        <a href="https://calendly.com/savannahleeh-l-coaching" target="_blank" class="cta-button" style="display: inline-block; margin-top: 0.5rem; padding: 10px 20px; font-size: 0.9rem;">
+                            View Available Times
+                        </a>
+                    </div>
+                </div>
+                
+                <button type="submit" class="cta-button" style="width: 100%; margin-top: 1rem;">Submit Consultation Request</button>
+                
+                <p style="font-size: 0.8rem; color: #385e72; text-align: center; margin-top: 1rem;">
+                    * Required fields. You'll receive a response within 24 hours.
+                </p>
+            </form>
         </div>
     </section>
 
-    <section id="about" class="section meets-you">
+    <section id="meets-you" class="section meets-you">
         <div class="container">
             <h2>Coaching That Meets You</h2>
             <p>
                 You're not a project to be fixed. You're a person to be supported, seen, and heard—and that's exactly what I offer.<br><br>
                 I'm not just a coach with credentials (though yes, I have those too: a background in psychology, certifications in nutrition, mindfulness, breathwork, and health coaching). I'm an intuitive guide, an empath, and a deep listener who knows how to tune into what you really need—sometimes before you even know how to say it.<br><br>
                 This work isn't one-size-fits-all. With me, it's personal.<br><br>
-                We start by focusing on the most important relationship in your life: the one you have with yourself. You will build confidence, emotional strength, and a sense of worth that isn't waiting on anything outside of you.<br><br>
-                I'm here to help you feel good now, not "when."
+                We start by focusing on the most important relationship in your life: the one you have with yourself. You will build confidence, emotional strength, and a sense of worth that isn't waiting on anything outside of you. I use all the tools I've studied—but only if they serve you.<br><br>
+                I'm here to help you feel good now, not "when."<br><br>
+                If you're curious, let's just talk. No pressure, no prep—just a free, honest, 30-minute conversation to see if we're a fit.
+            </p>
+        </div>
+    </section>
+
+    <section id="why" class="section">
+        <div class="container">
+            <h2>Why Work With Me?</h2>
+            <p>
+                If you want to walk away feeling good in the moment with tools to support you and your journey—this is the place for you. I'll hold space, help you feel supported, and offer tools to help you embrace your path—or even just find happiness right where you are. You don't have to fit in. You don't have to have it all figured out. Here, you'll always leave feeling seen, heard, and a little bit better.<br><br>
+                Don't know what you want? That's okay. You will figure it out on this journey.
             </p>
         </div>
     </section>
 
     <section id="services" class="section">
         <div class="container">
-            <h2>My Approach</h2>
+            <h2>Sessions</h2>
             <div class="services-list">
                 <div class="service-card">
-                    <h3>Personalized Coaching</h3>
-                    <p>1:1 sessions tailored to your unique needs, focusing on emotional wellness and self-worth.</p>
+                    <div class="coach-photo"></div>
+                    <h3>One-on-One Coaching</h3>
+                    <div class="service-card-visual">💻📱</div>
+                    <p>
+                        Personalized coaching sessions to help you build confidence, emotional wellness and lasting self-worth. Deep support, clarity, and compassion as you move toward a life that feels good inside and out.
+                    </p>
+                    <p style="font-size: 0.9rem; color: #8B9DC3; margin-top: 1rem;">
+                        <em>Available virtually via video call or in-person</em>
+                    </p>
                 </div>
                 <div class="service-card">
-                    <h3>Breathwork & Mindfulness</h3>
-                    <p>Evidence-based techniques to help you feel grounded and present in your body.</p>
+                    <h3>Happy For No Reason Group Coaching</h3>
+                    <div class="service-card-visual">😊✨🌟</div>
+                    <p>
+                        Join to find your happiness NOW! This is a 7-week program where each week we'll learn a tool that I was taught by Marci Shimoff's Happy for No Reason method—she coached me, and now I will coach you.
+                    </p>
+                    <p style="font-size: 0.9rem; color: #8B9DC3; margin-top: 1rem;">
+                        <em>Group sessions filled with joy and connection</em>
+                    </p>
                 </div>
-                <div class="service-card">
-                    <h3>Health & Wellness</h3>
-                    <p>Holistic approach to vibrant health that honors your whole self.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Emotional Support</h3>
-                    <p>Compassionate guidance to help you navigate life's challenges with confidence.</p>
-                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="journey" class="journey">
+        <div class="container">
+            <h2>My Journey</h2>
+            <div class="journey-card">
+                <h3>A Work in Progress</h3>
+                <p>
+                    I haven't always been kind—to others or to myself.<br>
+                    There were times I let my pain speak louder than my truth. I looked for love in the wrong places, chose relationships that confirmed my insecurities, and doubted my worth more often than I'd like to admit.<br><br>
+                    I felt anxious all the time. Tired, but wired. Like I was constantly feeling like I was giving to everyone else, but never fully connected to myself. My nervous system was on overdrive, but I didn't know I could live differently.<br><br>
+                    I didn't know it at the time, but I was trying to prove I was enough—by chasing approval, by overgiving, by surviving instead of living.<br><br>
+                    Then I started to tune in to take a look at myself and my needs. I began to give out of love and started filling my own cup first. I stopped waiting for the perfect moment, the perfect version of me, or some finish line to finally feel good. I began changing how I saw myself—and with that, how I saw the world. I discovered tools that helped me breathe, heal, nourish, and move through life differently.<br><br>
+                    I'm still growing. I'm still learning. I'm still human. But now I do it from a place of self-compassion, clarity, and joy in the now—not waiting until I "get there."<br><br>
+                    And that's what I offer you.<br>
+                    Not a program to fix you.<br>
+                    A supportive path that meets your needs and goals—and to feel good while you're walking it.
+                </p>
             </div>
         </div>
     </section>
@@ -309,5 +502,6 @@
             <p>© 2025 Well and Worthy Coaching with Savannah Boch. All rights reserved.</p>
         </div>
     </footer>
+
 </body>
 </html>
